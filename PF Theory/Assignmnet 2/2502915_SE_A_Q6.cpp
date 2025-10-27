@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <cstdlib> 
 #include <ctime>   
@@ -127,7 +128,7 @@ int main()
 
         if (adults < 1 || adults > 4 || children < 1 || children > 5)
         {
-            cout << "This category is not for Family!" << endl;
+            cout << "Sorry! For Family Tickets, Limit is 1 to 4 adult tickets and 1 to 5 children tickets." << endl;
             return 0;
         }
 
@@ -172,7 +173,7 @@ int main()
 
         if (adults < 1 || adults > 8)
         {
-            cout << "Invalid number of tickets!" << endl;
+            cout << "Sorry! Limit is 1 to 8 tickets." << endl;
             return 0;
         }
 
