@@ -11,7 +11,6 @@ int main()
     cout << "Enter second number (1-36): ";
     cin >> num2;
 
-    // Input Validation
     if (num1 < 1 || num1 > 36 || num2 < 1 || num2 > 36)
     {
         cout << "Invalid input! Numbers must be between 1 and 36." << endl;
@@ -71,7 +70,6 @@ int main()
         break;
     }
 
-    // Determine color of second number
     switch (num2)
     {
     case 1:
@@ -135,3 +133,4 @@ int main()
 
     return 0;
 }
+
