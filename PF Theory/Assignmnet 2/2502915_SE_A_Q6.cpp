@@ -1,18 +1,17 @@
 #include <iostream>
-#include <cstdlib> // for rand() and srand()
-#include <ctime>   // for time()
+#include <cstdlib> 
+#include <ctime>   
 using namespace std;
 
 int main()
 {
-    srand(time(0)); // seed for random numbers
+    srand(time(0)); 
 
     int matchChoice, enclosureChoice;
     char familyOption;
     int adults = 0, children = 0;
     string cnic;
 
-    // Ticket Prices
     int vip, premium, firstClass, general;
 
     cout << "===============================" << endl;
@@ -30,14 +29,12 @@ int main()
     cout << "Enter your choice (1-8): ";
     cin >> matchChoice;
 
-    // Input validation
     if (matchChoice < 1 || matchChoice > 8)
     {
         cout << "Invalid match selection!" << endl;
         return 0;
     }
 
-    // Ticket price setup
     switch (matchChoice)
     {
     case 1:
@@ -113,7 +110,7 @@ int main()
         break;
     }
 
-    int availableSeats = rand() % maxSeats + 1; // random seat availability
+    int availableSeats = rand() % maxSeats + 1; 
     cout << "Available seats in this enclosure: " << availableSeats << endl;
 
     cout << "Do you want to buy Family Tickets? (Y/N): ";
@@ -143,7 +140,6 @@ int main()
         cout << "Enter CNIC: ";
         cin >> cnic;
 
-        // Get enclosure price
         int price;
         switch (enclosureChoice)
         {
@@ -165,8 +161,8 @@ int main()
             break;
         }
 
-        double adultCost = adults * price * 0.9;   // 10% rebate
-        double childCost = children * price * 0.8; // 20% rebate
+        double adultCost = adults * price * 0.9;   
+        double childCost = children * price * 0.8; 
         total = adultCost + childCost;
     }
     else
@@ -211,7 +207,7 @@ int main()
         }
 
         if (adults > 4)
-            total = adults * price * 0.9; // 10% rebate
+            total = adults * price * 0.9; 
         else
             total = adults * price;
     }
@@ -221,7 +217,7 @@ int main()
     cout << " Total Amount Due: Rs. " << total << endl;
     cout << "=================================" << endl;
 
-    cout << "✅ Tickets booked successfully. Enjoy the match!" << endl;
+    cout << "Tickets booked successfully. Enjoy the match!" << endl;
 
     return 0;
 }
